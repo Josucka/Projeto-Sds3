@@ -22,10 +22,6 @@ public class Seller {
 	@OneToMany(mappedBy = "seller")
 	private List<Sale> sales = new ArrayList<>();
 	
-	public List<Sale> getSales() {
-		return sales;
-	}
-
 	public Seller() {
 	}
 
@@ -49,6 +45,8 @@ public class Seller {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
-	
+
+	public List<Sale> getSales() {
+		return sales;
+	}
 }
